@@ -13,6 +13,7 @@ from decouple import config
 from dotenv import load_dotenv
 load_dotenv()
 
+
 def extract_branches_info():
     url = "https://my.fibank.bg/EBank/public/offices"
 
