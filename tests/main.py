@@ -22,7 +22,6 @@ class FibankSearch(unittest.TestCase):
         value = extract_branches_info
         assert value is not []
 
-
     def tearDown(self):
         self.driver.close()
 
