@@ -11,7 +11,7 @@ load_dotenv()
 def send_email(file_path):
     sender_email = config("SENDER_EMAIL")
     sender_password = config("SENDER_PASSWORD")
-    receiver_email = input("Add the email receiver:")
+    receiver_email = "milenov556@gmail.com"                #input("Add the email receiver:")
 
     subject = "Fibank Branches Info"
 

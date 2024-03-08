@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -8,7 +9,11 @@ from bs4 import BeautifulSoup
 def extract_branches_info():
     url = "https://my.fibank.bg/EBank/public/offices"
 
-    driver = webdriver.Chrome()
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
 
     ul_locator = (By.CSS_SELECTOR, "#app .list-inline")
